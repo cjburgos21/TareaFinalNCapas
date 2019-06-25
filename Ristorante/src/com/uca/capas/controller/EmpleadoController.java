@@ -44,6 +44,7 @@ public class EmpleadoController {
 	@RequestMapping(value = "/empleado/ver", method = RequestMethod.POST)
 	public ModelAndView verEmpleado(@RequestParam(name = "empId2",  required = true) Integer empId, @RequestParam(name = "sucId2",  required = true) Integer sucId){
 		ModelAndView mav = new ModelAndView();
+		//empleadoService.eliminarEmpleado(empId);
 		mav.addObject("editarEmpDTO", empleadoService.editEmpDTO(empId));
 		mav.addObject("IdPadre", sucId);
 		mav.setViewName("empleados/editarEmpleado");
@@ -69,6 +70,7 @@ public class EmpleadoController {
 	public ModelAndView registrar(@RequestParam(name = "id") Integer empId){
 		ModelAndView mav = new ModelAndView();
 		mav.addObject("editarEmpDTO", new EditarEmpDTO());
+		//System.out.println(empId);
 		mav.addObject("IDSucursal", empId);
 		mav.setViewName("empleados/registrarEmpleado");
 		return mav;
@@ -89,4 +91,3 @@ public class EmpleadoController {
 		return mav;
 	}
 }
-

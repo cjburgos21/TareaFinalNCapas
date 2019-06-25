@@ -82,4 +82,3 @@ public class EmpleadoServiceImpl implements EmpleadoService{
 		entitymanager.flush();
 	}
 }
-

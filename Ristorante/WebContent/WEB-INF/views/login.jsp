@@ -10,13 +10,13 @@
 <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
 <link rel="stylesheet" href="resources/css/login.css">
-<title>Login</title>
+<title>Welcome, Please Login</title>
 </head>
 <body >
 	
 	<div class="simple-login-container">
 		<h2>Login</h2>
-			<form id="holi" >
+			<form id="prueba1" >
 	
 			
 			<div class="row">
@@ -46,17 +46,16 @@
     </script>
     
    	<script type='text/javascript'>
-	   	$("#holi").on('submit', function (e) {
+	   	$("#prueba1").on('submit', function (e) {
 			e.preventDefault();
 			$.ajax(
 				{
 					url: "${pageContext.request.contextPath}/login",
-					data:  $("#holi").serialize(),
+					data:  $("#prueba1").serialize(),
 					type: 'POST',
 					success: function (result) {
 
 						location.href = "${pageContext.request.contextPath}/sucursal/main"
-						//$( location ).attr("href", "${pageContext.request.contextPath}/sucursal/main");
 					},
 					error: function (xhr) {
 						swal("Usuario o contraseña inválido, por favor intente nuevamente", {

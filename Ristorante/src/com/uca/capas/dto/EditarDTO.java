@@ -17,27 +17,27 @@ public class EditarDTO {
 	
 	private Integer idSucursal;
 	
-	@NotEmpty(message = "Ingrese el nombre de la sucursal")
+	@NotEmpty(message = "favor ingrese el nombre de la sucursal")
 	@Size(message = "la longitud maxima es de 100 caracteres", min = 0, max = 100)
 	private String nombreSucursal;
 	
-	@NotEmpty(message = "Ingrese sucursal")
+	@NotEmpty(message = "favor ingrese la ubicacion de la sucursal")
 	@Size(message = "la longitud maxima es de 100 caracteres", min = 0, max = 100)
 	private String ubicacionSucursal;
 
-	@NotEmpty(message = "Ingrese una hora")
+	@NotEmpty(message = "favor ingresar una hora")
 	private String horarioEntrada;
 	
-	@NotEmpty(message = "Ingrese una hora")
+	@NotEmpty(message = "favor ingresar una hora")
 	private String horarioSalida;
 	
-	@NotNull(message="Ingrese una cantidad")
-	@PositiveOrZero(message = "Numero invalido")
-	@Digits(message = "Cantidad demasiado grande", integer = 7, fraction = 0)
+	@NotNull(message="favor ingresar un cantidad")
+	@PositiveOrZero(message = "en numero de mesas no es valido")
+	@Digits(message = "Su cantidad de mesas ha sobrepasado 9,999,999 ", integer = 7, fraction = 0)
 	private BigInteger numeroMesas;
 	
-	@NotEmpty(message = "Ingrese el nombre del gerente")
-	@Size(message = "Maxima 100 caracteres", min = 0, max = 100)
+	@NotEmpty(message = "favor ingrese el nombre del gerente")
+	@Size(message = "la longitud maxima es de 100 caracteres", min = 0, max = 100)
 	private String nombreGerente;
 
 	public EditarDTO() {
@@ -45,12 +45,12 @@ public class EditarDTO {
 	}
 
 	public EditarDTO(Integer idSucursal,
-			@NotEmpty(message = "Ingrese el nombre de la sucursal") @Size(message = "Longitud maxima es de 150 caracteres", min = 0, max = 100) String nombreSucursal,
-			@NotEmpty(message = "Ingrese la ubicacion de la sucursal") @Size(message = "Longitud maxima es de 150 caracteres", min = 0, max = 100) String ubicacionSucursal,
-			@NotEmpty(message = "Ingrese el horario de entrada") @Pattern(regexp = "^(2[0-3]|[01]?[0-9]):([0-5]?[0-9])$", message = "Ingrese un formato valido 'HH:MM'") String horarioEntrada,
-			@NotEmpty(message = "Ingrese el horario de salida") @Pattern(regexp = "^(2[0-3]|[01]?[0-9]):([0-5]?[0-9])$", message = "Ingrese un formato valido 'HH:MM'") String horarioSalida,
-			@NotEmpty(message = "Ingrese el numero de mesas") @PositiveOrZero(message = "Numero ingresado es invalido") @Digits(message = "Ingrese un numero valido", integer = 6, fraction = 0) BigInteger numeroMesas,
-			@NotEmpty(message = "Ingrese el nombre del gerente") @Size(message = "Longitud maxima es de 150 caracteres", min = 0, max = 100) String nombreGerente) {
+			@NotEmpty(message = "favor ingrese el nombre de la sucursal") @Size(message = "la longitud maxima es de 150 caracteres", min = 0, max = 100) String nombreSucursal,
+			@NotEmpty(message = "favor ingrese la ubicacion de la sucursal") @Size(message = "la longitud maxima es de 150 caracteres", min = 0, max = 100) String ubicacionSucursal,
+			@NotEmpty(message = "favor ingrese el horario de entrada") @Pattern(regexp = "^(2[0-3]|[01]?[0-9]):([0-5]?[0-9])$", message = "ingrese un formato valido 'HH:MM'") String horarioEntrada,
+			@NotEmpty(message = "favor ingrese el horario de salida") @Pattern(regexp = "^(2[0-3]|[01]?[0-9]):([0-5]?[0-9])$", message = "ingrese un formato valido 'HH:MM'") String horarioSalida,
+			@NotEmpty(message = "favor ingrese el numero de mesas") @PositiveOrZero(message = "el numero de mesas debe ser un entero positivo") @Digits(message = "ingrese un numero valido", integer = 6, fraction = 0) BigInteger numeroMesas,
+			@NotEmpty(message = "favor ingrese el nombre del gerente") @Size(message = "la longitud maxima es de 150 caracteres", min = 0, max = 100) String nombreGerente) {
 		super();
 		this.idSucursal = idSucursal;
 		this.nombreSucursal = nombreSucursal;
@@ -117,7 +117,6 @@ public class EditarDTO {
 		this.nombreGerente = nombreGerente;
 	}
 	
-	//Delegate Functions
 	public Time getHorarioEntradaDelegate() {
 		if(this.horarioEntrada == null) return null;
 		else {

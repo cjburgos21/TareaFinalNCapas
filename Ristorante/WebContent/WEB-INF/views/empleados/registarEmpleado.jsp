@@ -16,7 +16,7 @@
 <body>
 <div class="container">
 	<h2 class="text-center">Registrar Empleado</h2>
-	<form:form id="holi" action="${pageContext.request.contextPath}/empleado/registrar" method="POST" modelAttribute="editarEmpDTO">
+	<form:form id="reg" action="${pageContext.request.contextPath}/empleado/registrar" method="POST" modelAttribute="editarEmpDTO">
 		<form:input type="hidden" name="id" value="1" path="idEmpleado"/>
 		<input type="hidden" name="sucursalId" value="${IDSucursal}"/>
 			<div class="row">

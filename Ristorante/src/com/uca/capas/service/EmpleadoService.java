@@ -17,3 +17,4 @@ public interface EmpleadoService {
 	
 	public void agregarEmpleado(EditarEmpDTO dto, Integer succId);
 }
+

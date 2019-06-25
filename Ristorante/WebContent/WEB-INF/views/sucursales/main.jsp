@@ -25,7 +25,7 @@
     	<div class="row col-md-6 col-md-offset-2 custyle">
     		<table id="table" class="table table-striped custab">
     			<thead>
-    				<button onclick="location.href='${pageContext.request.contextPath}/sucursal/nueva'" class="btn btn-primary btn-xl pull-right"><b>+</b> Registrar Sucursal</button>
+    				<button onclick="location.href='${pageContext.request.contextPath}/sucursal/nueva'" class="btn ouline-secondary btn-xl pull-right"><b></b> Registrar Sucursal</button>
 					<tr>
 						<th class="text-center">Nombre</th>
 					</tr>
