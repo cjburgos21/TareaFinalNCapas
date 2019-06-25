@@ -16,7 +16,7 @@
 <body>
 <div class="container">
 	<h2 class="text-center">Editar Empleado</h2>
-	<form:form id="edempleado" action="${pageContext.request.contextPath}/empleado/editar" method="POST" modelAttribute="editarEmpDTO">
+	<form:form id="editempleado" action="${pageContext.request.contextPath}/empleado/editar" method="POST" modelAttribute="editarEmpDTO">
 		<form:input type="hidden" name="id" path="idEmpleado"/>
 		<input type="hidden" name="empId" value="${IdPadre}"/>
 			<div class="row">

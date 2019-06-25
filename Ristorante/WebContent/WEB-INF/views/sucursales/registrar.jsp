@@ -16,7 +16,7 @@
 <body>
 <div class="container">
 	<h2 class="text-center">Registrar Sucursal</h2>
-	<form:form id="regsucursal" action="${pageContext.request.contextPath}/sucursal/registrar" method="POST" modelAttribute="editarDTO">
+	<form:form id="registersucursal" action="${pageContext.request.contextPath}/sucursal/registrar" method="POST" modelAttribute="editarDTO">
 		<form:input type="hidden" name="id" value="1" path="idSucursal"/>
 		
 			<div class="row">

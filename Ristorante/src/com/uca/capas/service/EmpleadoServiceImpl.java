@@ -35,7 +35,6 @@ public class EmpleadoServiceImpl implements EmpleadoService{
 	@Override
 	@Transactional
 	public void eliminarEmpleado(Integer id) {
-		// TODO Auto-generated method stub
 		Empleado empleado = empleadoRepository.getOne(id);
 		entitymanager.remove(empleado);
 		entitymanager.flush();
@@ -43,7 +42,6 @@ public class EmpleadoServiceImpl implements EmpleadoService{
 
 	@Override
 	public EditarEmpDTO editEmpDTO(Integer id) {
-		// TODO Auto-generated method stub
 		EditarEmpDTO dto = new EditarEmpDTO();
 		Empleado empleado = empleadoRepository.getOne(id);
 		dto.setIdEmpleado(empleado.getIdEmpleado());
@@ -57,7 +55,6 @@ public class EmpleadoServiceImpl implements EmpleadoService{
 	@Override
 	@Transactional
 	public void editarEmpleado(EditarEmpDTO dto) {
-		// TODO Auto-generated method stub
 		Empleado empleado = empleadoRepository.getOne(dto.getIdEmpleado());
 		empleado.setNombreEmpleado(dto.getNombreEmpleado());
 		empleado.setEdadEmpleado(dto.getEdadEmpleado());
@@ -70,7 +67,6 @@ public class EmpleadoServiceImpl implements EmpleadoService{
 	@Override
 	@Transactional
 	public void agregarEmpleado(EditarEmpDTO dto, Integer succId) {
-		// TODO Auto-generated method stub
 		Sucursal succ = sucursalRepository.getOne(succId);
 		Empleado emp = new Empleado();
 		emp.setNombreEmpleado(dto.getNombreEmpleado());

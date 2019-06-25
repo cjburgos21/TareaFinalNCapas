@@ -40,12 +40,10 @@ public class Empleado {
 	private Sucursal sucursal;
 
 	public Empleado() {
-		//super();
 	}
 
 	public Empleado(Integer idEmpleado, String nombreEmpleado, BigInteger edadEmpleado, Character generoEmpleado,
 			Boolean estadoEmpleado, Sucursal sucursal) {
-		//super();
 		this.idEmpleado = idEmpleado;
 		this.nombreEmpleado = nombreEmpleado;
 		this.edadEmpleado = edadEmpleado;
@@ -102,7 +100,6 @@ public class Empleado {
 		this.sucursal = sucursal;
 	}
 	
-	//Delegate Functions
 	public String getgeneroEmpleadoDelegate() {
 		String sexo = null;
 		if(this.generoEmpleado == null) {
