@@ -21,8 +21,9 @@
 			}
     </script>
     <div class="container">
-    	<div class="row col-md-6 col-md-offset-2 custyle">
-    		<table id="table" class="table table-striped custab">
+    	<h2 class="col-sm-10 text-secondary border border-success border-top-0 border-left-0 border-right-0">Bienvenido a Modulo Empleado</h2>
+    <div class="row col-md-6 col-md-offset-2 custyle">
+    		<table id="table" class="table table-dark">
     		<thead>
     			<button onclick="location.href='${pageContext.request.contextPath}/sucursal/main'" class="btn btn-secondary btn-xl pull-left">Ver todas las Sucursales</button>
 				<tr>
@@ -48,7 +49,7 @@
 	<br>
 	<div class="container">
 		<div class="row col-md-6 col-md-offset-2 custyle">
-			<table id="table" class="table table-striped custab">
+			<table id="table" class="table table-dark">
 				<thead>
 				<button onclick="location.href='${pageContext.request.contextPath}/empleado/nuevo?id=${sucursal.idSucursal}'" class="btn btn-secondary btn-xl pull-left"><b></b> Registrar Empleado</button>
 					<tr>
@@ -75,7 +76,7 @@
 							<form action="${pageContext.request.contextPath}/empleado/eliminar" method="post"> 
 			            		<input type="hidden" name="empId" value=${empleados.idEmpleado}>
 			            		<input type="hidden" name="sucId" value=${empleados.sucursal.idSucursal}>
-			            		<input type="submit" class="btn btn-danger" value="Eliminar">
+			            		<input type="submit" class="btn btn-warning" value="Eliminar">
 							</form>
 						</td>
 					</tr>

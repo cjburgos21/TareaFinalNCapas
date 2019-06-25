@@ -15,7 +15,7 @@
 </head>
 <body>
 <div class="container">
-	<h2 class="text-center">Editar Empleado</h2>
+	<h2 class="col-sm-10 text-secondary border border-success border-top-0 border-left-0 border-right-0">Editar Empleado</h2>
 	<form:form id="editempleado" action="${pageContext.request.contextPath}/empleado/editar" method="POST" modelAttribute="editarEmpDTO">
 		<form:input type="hidden" name="id" path="idEmpleado"/>
 		<input type="hidden" name="empId" value="${IdPadre}"/>

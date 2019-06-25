@@ -48,7 +48,7 @@
 					<td class="text-center">
 						<form action="${pageContext.request.contextPath}/sucursal/eliminar" method="post"> 
             				<input type="hidden" name="valorId" value=${sucursales.idSucursal}>
-            				<input class="btn btn-danger" type="submit" class="delete_button" value="Eliminar">
+            				<input class="btn btn-warning" type="submit" class="delete_button" value="Eliminar">
 						</form>
 					</td>
 				</tr>
